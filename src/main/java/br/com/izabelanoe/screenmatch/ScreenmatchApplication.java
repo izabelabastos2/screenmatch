@@ -1,5 +1,6 @@
 package br.com.izabelanoe.screenmatch;
 
+import br.com.izabelanoe.screenmatch.principal.Detalhes;
 import br.com.izabelanoe.screenmatch.principal.Principal;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -15,8 +16,18 @@ public class ScreenmatchApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
+// ************ UTILIZADO PARA RODAR MENU APLICAÇÃO PRINCIPAL ************
+
 		Principal principal = new Principal();
 		principal.exibeMenu();
+
+// **************** UTILIZADO PARA RODAR CLASSE DE EXEMPLO ***************
+//
+//		Detalhes detalhes = new Detalhes();
+//		detalhes.testaStream();
+//
+//*************************************************************************
+
 
 	}
 }
