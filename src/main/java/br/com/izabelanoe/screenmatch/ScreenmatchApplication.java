@@ -16,18 +16,17 @@ public class ScreenmatchApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-// ************ UTILIZADO PARA RODAR MENU APLICAÇÃO PRINCIPAL ************
+		// ************ UTILIZADO PARA RODAR MENU APLICAÇÃO PRINCIPAL ************
 
 		Principal principal = new Principal();
 		principal.exibeMenu();
 
-// **************** UTILIZADO PARA RODAR CLASSE DE EXEMPLO ***************
-//
-//		Detalhes detalhes = new Detalhes();
-//		detalhes.testaStream();
-//
-//*************************************************************************
-
+		// **************** UTILIZADO PARA RODAR CLASSE DE EXEMPLO ***************
+		//
+		// Detalhes detalhes = new Detalhes();
+		// detalhes.testaStream();
+		//
+		// *************************************************************************
 
 	}
 }
