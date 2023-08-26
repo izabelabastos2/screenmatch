@@ -127,7 +127,7 @@ public class Principal {
 
                 System.out.println("****************************************************************");
                 System.out.println("            Média avaliacao de cada temporada:                  ");
-                System.out.println("****************************************************************");
+                System.out.println("****************************************************************\n");
 
                 Map<Integer, Double> avaliacaoPorTemporada = episodios.stream()
                                 .filter(e -> e.getAvaliacao() > 0.0)
@@ -135,6 +135,22 @@ public class Principal {
                                                 Collectors.averagingDouble(Episodio::getAvaliacao)));
 
                 System.out.println(avaliacaoPorTemporada);
+                System.out.println("\n");
 
+                System.out.println("****************************************************************");
+                System.out.println("          Usando a classe DoubleSummaryStatistics:              ");
+                System.out.println("**************************************************************\n");
+
+                DoubleSummaryStatistics est = episodios.stream()
+                                .filter(e -> e.getAvaliacao() > 0.0)
+                                .collect(Collectors.summarizingDouble(Episodio::getAvaliacao));
+
+                System.out.println(est);
+                System.out.println("\n");
+
+                System.out.println("Média: " + est.getAverage());
+                System.out.println("Melhor episódio: " + est.getMax());
+                System.out.println("Pior episódio: " + est.getMin());
+                System.out.println("Pior episódio: " + est.getCount());
         }
 }
